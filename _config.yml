@@ -5,8 +5,8 @@ welcome_message: 学而时习之，不亦说乎？有朋自远方来，不亦乐
 description: 不唯书，不唯上，只唯真。
 # creator: <a href=""></a>
 
-url: 'https://albert-w.github.io/cool-panda/'
-baseurl : '/cool-panda'
+url: 'https://albert-w.github.io/'
+baseurl : 'cool-panda'
 
 # permalink: /:year/:month/:title/
 
