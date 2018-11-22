@@ -5,12 +5,12 @@
     <div class="panel-main__inner panel-inverted">
       <div class="panel-main__content">
 
-        <a href="/#blog" title="前往 {{ site.title }} 的主页" class="blog-button">
+        <a href="#blog" title="前往 {{ site.title }} 的主页" class="blog-button">
 <img src="assets/images/avatar.jpg" width="80" alt="{{ site.title }} logo" class="panel-cover__logo logo" />
         </a>
 
         <h1 class="panel-cover__title panel-title">
-          <a href="/#blog" title="link to homepage for {{ site.title }}" class="blog-button">{{site.title}}</a>
+          <a href="#blog" title="link to homepage for {{ site.title }}" class="blog-button">{{site.title}}</a>
         </h1>
 
         {% if site.subtitle %}
@@ -30,7 +30,7 @@
             <nav class="cover-navigation cover-navigation--primary">
               <ul class="navigation">
                 <li class="navigation__item">
-                  <a href="/#blog" title="{{site.blog_button.description}}" class="blog-button">{{site.blog_button.title}}
+                  <a href="#blog" title="{{site.blog_button.description}}" class="blog-button">{{site.blog_button.title}}
                   </a>
                   <!-- {% if window.location.hash == null %}
                   <span>{{site.blog_button.description}} </span>
