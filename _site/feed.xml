@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cool Panda</title>
+    <description>不唯书，不唯上，只唯真。</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 22 Nov 2018 10:08:22 +0000</pubDate>
+    <lastBuildDate>Thu, 22 Nov 2018 10:08:22 +0000</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>如何使用jekyll搭建自己的个人博客</title>
+        <description>&lt;p&gt;工欲善其事，必行利其器。&lt;/p&gt;
+
+&lt;p&gt;为充分利用github page 和 jekyll 的便利，建议先学习jekyll的使用。
+推荐一个教学视频——&lt;a href=&quot;https://www.bilibili.com/video/av25864819/&quot;&gt;Jekyll - 静态网站生成器教程&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;然后&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone https://github.com/Albert-W/cool-panda.git your_site
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;your_site
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundler update
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundler &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundler &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;jekyll 启动网络服务器，点击 http://127.0.0.1:4000 就可查看网站。&lt;/p&gt;
+
+&lt;p&gt;项目全局配置文件是 _config.yml， 主入口文件是根目录下的index.html, 主页面布局文件是 _layouts/default.html。&lt;/p&gt;
+
+&lt;p&gt;整个项目结构如下：
+&lt;img src=&quot;assets/images/jekyll-architecture.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate>
+        <link>http://localhost:4000/2018/11/21/how-to-create.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/11/21/how-to-create.html</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
