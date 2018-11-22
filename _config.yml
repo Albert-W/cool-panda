@@ -1,0 +1,51 @@
+# Basic
+title: Cool Panda
+subtitle: 这里是伍亦勤的个人博客。
+welcome_message: 学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知而不愠，不亦君子乎？
+description: 不唯书，不唯上，只唯真。
+# creator: <a href=""></a>
+
+# url: ""
+
+# permalink: /:year/:month/:title/
+
+# Format
+# highlighter: rouge
+
+# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
+cover_color: blue
+
+# The blog button should not be removed.
+blog_button:
+    title: Blog
+    description: Visit blog
+
+# Navigation buttons in the front page.
+nav:
+    - {title: EBook 1, description: live and learn, url: 'https://albert-w.github.io/live-and-learn/'}
+    - {title: EBook 2, description: Exchristian, url: 'https://exchristian.github.io/'}
+    - {title: Tiny Tool, description: Fold Locker, url: 'https://albert-w.github.io/Folder-locker/'}
+
+# Pagination
+gems: [jekyll-paginate]
+paginate: 10
+paginate_path: "page/:num/"
+
+# Comment
+comment:
+    # disqus: 
+    # duoshuo: 
+    
+# Social
+social:
+    # weibo: 
+    github: Albert-W
+    # twitter: 
+    # gplus: 
+    # mail: 
+    zhihu: pfdlw
+
+# Google Analytics
+ga:
+    # id: your_ga_id
+    # host: your_host
