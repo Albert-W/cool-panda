@@ -2,6 +2,7 @@
 layout: post
 title: 如何使用jekyll搭建自己的个人博客
 date: 2018-11-21
+permalink: 
 
 ---
 
