@@ -6,12 +6,14 @@ description: 不唯书，不唯上，只唯真。
 # creator: <a href=""></a>
 
 url: ''
-baseurl : '/cool-panda'
+# baseurl : '/cool-panda'
+baseurl : ''
 
 # permalink: /:year/:month/:title/
+permalink: /:title/
 
 # Format
-# highlighter: rouge
+highlighter: rouge
 
 # supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
 cover_color: blue

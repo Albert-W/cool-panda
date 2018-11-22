@@ -3,10 +3,10 @@
   <channel>
     <title>Cool Panda</title>
     <description>不唯书，不唯上，只唯真。</description>
-    <link>http://localhost:4000/cool-panda/</link>
-    <atom:link href="http://localhost:4000/cool-panda/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 22 Nov 2018 16:45:25 +0000</pubDate>
-    <lastBuildDate>Thu, 22 Nov 2018 16:45:25 +0000</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 22 Nov 2018 20:16:36 +0000</pubDate>
+    <lastBuildDate>Thu, 22 Nov 2018 20:16:36 +0000</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -35,8 +35,8 @@
 &lt;p&gt;如果默克尔能虚心学习马克思的否定之否定的哲学理论，恐怕不至于陷入骑虎难下、追悔莫及的境地。&lt;/p&gt;
 </description>
         <pubDate>Thu, 22 Nov 2018 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/cool-panda/2018/11/22/3.html</link>
-        <guid isPermaLink="true">http://localhost:4000/cool-panda/2018/11/22/3.html</guid>
+        <link>http://localhost:4000/3/</link>
+        <guid isPermaLink="true">http://localhost:4000/3/</guid>
         
         
       </item>
@@ -109,8 +109,8 @@
 
 </description>
         <pubDate>Thu, 22 Nov 2018 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/cool-panda/2018/11/22/2.html</link>
-        <guid isPermaLink="true">http://localhost:4000/cool-panda/2018/11/22/2.html</guid>
+        <link>http://localhost:4000/2/</link>
+        <guid isPermaLink="true">http://localhost:4000/2/</guid>
         
         
       </item>
@@ -283,8 +283,8 @@
 &lt;p&gt;全文完。&lt;/p&gt;
 </description>
         <pubDate>Thu, 22 Nov 2018 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/cool-panda/2018/11/22/1.html</link>
-        <guid isPermaLink="true">http://localhost:4000/cool-panda/2018/11/22/1.html</guid>
+        <link>http://localhost:4000/1/</link>
+        <guid isPermaLink="true">http://localhost:4000/1/</guid>
         
         
       </item>
@@ -313,8 +313,8 @@
 
 </description>
         <pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/cool-panda/2018/11/21/how-to-create.html</link>
-        <guid isPermaLink="true">http://localhost:4000/cool-panda/2018/11/21/how-to-create.html</guid>
+        <link>http://localhost:4000/how-to-create/</link>
+        <guid isPermaLink="true">http://localhost:4000/how-to-create/</guid>
         
         
       </item>
