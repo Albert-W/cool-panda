@@ -5,13 +5,13 @@
     <description>不唯书，不唯上，只唯真。</description>
     <link>http://localhost:4000/cool-panda/</link>
     <atom:link href="http://localhost:4000/cool-panda/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 22 Nov 2018 15:04:25 +0000</pubDate>
-    <lastBuildDate>Thu, 22 Nov 2018 15:04:25 +0000</lastBuildDate>
+    <pubDate>Thu, 22 Nov 2018 15:18:41 +0000</pubDate>
+    <lastBuildDate>Thu, 22 Nov 2018 15:18:41 +0000</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
         <title>为什么寒门难出贵子</title>
-        <description>&lt;h1 id=&quot;为什么寒门难出贵子&quot;&gt;为什么寒门难出贵子&lt;/h1&gt;
+        <description>&lt;!-- # 为什么寒门难出贵子 --&gt;
 
 &lt;p&gt;坐在航站楼候机厅，看着来来往往的人群，回想起自己的求学经历，一些感想喷涌而出。&lt;/p&gt;
 
@@ -85,7 +85,7 @@
     
       <item>
         <title>实用主义的人生</title>
-        <description>&lt;h1 id=&quot;实用主义的人生&quot;&gt;实用主义的人生&lt;/h1&gt;
+        <description>&lt;!-- # 实用主义的人生 --&gt;
 &lt;p&gt;实用主义是我的人生信条，用一句话形容之就是，“解放思想，实事求是”。&lt;/p&gt;
 
 &lt;h2 id=&quot;实用主义介绍&quot;&gt;实用主义介绍&lt;/h2&gt;
