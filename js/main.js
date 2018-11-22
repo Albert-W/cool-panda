@@ -5,7 +5,7 @@ $(document).ready(function () {
     $('.navigation__item:first').hide();
     // If already in blog, return early without animate overlay panel again.
     if (location.hash && location.hash == "#blog") {
-      window.location.href = '';
+      window.location.href = './';
       $('.panel-cover').removeClass('panel-cover--collapsed');
       $('.main-post-list').addClass('hidden');
       return
