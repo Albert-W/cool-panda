@@ -1,12 +1,25 @@
-# Vno - Jekyll
+### 前置知识
 
-[Vno Jekyll](https://github.com/onevcat/vno-jekyll) is a theme for [Jekyll](http://jekyllrb.com). It is a port of my Ghost theme [vno](https://github.com/onevcat/vno), which is originally developed from [Dale Anthony's Uno](https://github.com/daleanthony/uno).
+工欲善其事，必行利其器。
 
-## Live Demo
+为充分利用github page 和 jekyll 的便利，建议先学习jekyll的使用。
+推荐一个教学视频——[Jekyll - 静态网站生成器教程](https://www.bilibili.com/video/av25864819/)
 
-See [Vno - Jekyll](http://vno.onevcat.com) site and [my blog](http://onevcat.com).
+### 使用
 
-You can also find some instruction as well as other sites using Vno theme in [this page](http://vno.onevcat.com/2016/02/hello-world-vno/).
+```bash
+$ git clone https://github.com/Albert-W/cool-panda.git your_site
+$ cd your_site
+$ bundler update
+$ bundler install
+$ bundler exec jekyll serve
+```
+jekyll 启动网络服务器，点击 http://127.0.0.1:4000 就可查看网站。
+
+项目全局配置文件是 _config.yml， 主入口文件是根目录下的index.html, 主页面布局文件是 _layouts/default.html。
+
+整个项目结构如下：
+![](assets/images/jekyll-architecture.jpg)
 
 ## Licence
 
