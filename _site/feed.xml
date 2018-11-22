@@ -3,11 +3,22 @@
   <channel>
     <title>Cool Panda</title>
     <description>不唯书，不唯上，只唯真。</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 22 Nov 2018 12:00:05 +0000</pubDate>
-    <lastBuildDate>Thu, 22 Nov 2018 12:00:05 +0000</lastBuildDate>
+    <link>http://localhost:4000/cool-panda/</link>
+    <atom:link href="http://localhost:4000/cool-panda/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 22 Nov 2018 12:40:39 +0000</pubDate>
+    <lastBuildDate>Thu, 22 Nov 2018 12:40:39 +0000</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>学无止境</title>
+        <description>&lt;h2 id=&quot;第二篇博客&quot;&gt;第二篇博客&lt;/h2&gt;
+</description>
+        <pubDate>Thu, 22 Nov 2018 00:00:00 +0000</pubDate>
+        <link>http://localhost:4000/cool-panda/2018/11/22/1.html</link>
+        <guid isPermaLink="true">http://localhost:4000/cool-panda/2018/11/22/1.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>如何使用jekyll搭建自己的个人博客</title>
@@ -29,12 +40,12 @@
 &lt;p&gt;项目全局配置文件是 _config.yml， 主入口文件是根目录下的index.html, 主页面布局文件是 _layouts/default.html。&lt;/p&gt;
 
 &lt;p&gt;整个项目结构如下：
-&lt;img src=&quot;/assets/images/jekyll-architecture.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/cool-panda/assets/images/jekyll-architecture.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/2018/11/21/how-to-create.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/11/21/how-to-create.html</guid>
+        <link>http://localhost:4000/cool-panda/2018/11/21/how-to-create.html</link>
+        <guid isPermaLink="true">http://localhost:4000/cool-panda/2018/11/21/how-to-create.html</guid>
         
         
       </item>
