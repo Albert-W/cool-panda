@@ -25,7 +25,7 @@ blog_button:
 nav:
     - {title: EBook 1, description: live and learn, url: 'https://albert-w.github.io/live-and-learn/'}
     - {title: EBook 2, description: Exchristian, url: 'https://exchristian.github.io/'}
-    - {title: Tiny Tool, description: Fold Locker, url: 'https://albert-w.github.io/Folder-locker/'}
+    # - {title: Tiny Tool, description: Fold Locker, url: 'https://albert-w.github.io/Folder-locker/'}
 
 # Pagination
 gems: [jekyll-paginate]
