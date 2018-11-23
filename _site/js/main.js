@@ -24,7 +24,7 @@ $(document).ready(function () {
       window.location.href = '/';
       $('.panel-cover').removeClass('panel-cover--collapsed');
     } else {
-
+      $('.navigation__item:first').hide();
       $('.panel-cover').addClass('panel-cover--collapsed');
     }
     panelState();
