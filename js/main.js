@@ -45,6 +45,7 @@ $(document).ready(function () {
   });
 
   if (window.location.hash && window.location.hash == "#blog") {
+    $('.navigation__item:first').hide();
     $('.panel-cover').addClass('panel-cover--collapsed');
     panelState();
   }
