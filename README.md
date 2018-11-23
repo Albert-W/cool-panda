@@ -21,6 +21,15 @@ jekyll 启动网络服务器，点击 http://127.0.0.1:4000 就可查看网站�
 整个项目结构如下：
 ![](assets/images/jekyll-architecture.jpg)
 
-## Licence
+
+### 项目展示
+
+在线展示: [cool panda](http://coolpanda.ml/)
+
+离线展示
+![](assets/images/index.jpg)
+![](assets/images/blog.jpg)
+
+### Licence
 
 Great thanks to [Dale Anthony](https://github.com/daleanthony) and his [Uno](https://github.com/daleanthony/uno). Vno Jekyll is based on Uno, and contains a lot of modification on page layout, animation, font and some more things I can not remember. Vno Jekyll is followed with Uno and be licensed as [Creative Commons Attribution 4.0 International](http://creativecommons.org/licenses/by/4.0/). See the link for more information.
