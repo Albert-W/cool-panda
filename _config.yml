@@ -10,7 +10,7 @@ url: ''
 baseurl : ''
 
 # permalink: /:year/:month/:title/
-permalink: /:title/
+permalink: /:year-:month-:day/:title.html
 
 # Format
 highlighter: rouge
@@ -31,7 +31,7 @@ nav:
 
 # Pagination
 gems: [jekyll-paginate]
-paginate: 10
+paginate: 5
 paginate_path: "page/:num/"
 
 # Comment
