@@ -5,9 +5,40 @@
     <description>不唯书，不唯上，只唯真。</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 24 Nov 2018 08:24:54 +0000</pubDate>
-    <lastBuildDate>Sat, 24 Nov 2018 08:24:54 +0000</lastBuildDate>
+    <pubDate>Mon, 26 Nov 2018 09:11:34 +0000</pubDate>
+    <lastBuildDate>Mon, 26 Nov 2018 09:11:34 +0000</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>如何获得上进心？</title>
+        <description>&lt;p&gt;上进心是一种“渴望变强”的心境。&lt;/p&gt;
+
+&lt;p&gt;读高中时，我挖空心思 想提高成绩。&lt;/p&gt;
+
+&lt;p&gt;我甚至认为自己的头发太长会吸引头部营养，头发的重量增加身体负担，头发的摇摆会分散注意力，因此想提升成绩，先理短发。&lt;/p&gt;
+
+&lt;p&gt;就像樱木花道一样，当他想要变强之后，理掉了自己风骚的秀发。也像一拳超人一样，变秃了，也变强了。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/11261.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;学校是一般实验中学，我考到了前十的成绩，上了个985高校。&lt;/p&gt;
+
+&lt;p&gt;挖空心思渴望变强，如饥似渴追求变强，这就是上进心。&lt;/p&gt;
+
+&lt;p&gt;何为虚假的勤奋？其实是漫无目的地做无用功，让自己忙碌，并未让自己变强。&lt;/p&gt;
+
+&lt;p&gt;在所有驱动人前进的动力之中，变强就像核聚变一样，靠最朴素的元素，产生最巨大、接近无限的能源供应。&lt;/p&gt;
+
+&lt;p&gt;日漫中所谓的小宇宙爆发，实际上就人渴望变强的心境被激发，于是青铜圣斗士可以对抗黄金圣斗士。&lt;/p&gt;
+
+&lt;p&gt;所以要培养自己的上进心，关键在于培养变强的渴望，引爆内心的小宇宙。&lt;/p&gt;
+</description>
+        <pubDate>Mon, 26 Nov 2018 00:00:00 +0000</pubDate>
+        <link>http://localhost:4000/2018-11-26/1.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018-11-26/1.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>如何保持旺盛的精力</title>
@@ -345,7 +376,7 @@
 &lt;p&gt;项目全局配置文件是 _config.yml， 主入口文件是根目录下的index.html, 主页面布局文件是 _layouts/default.html。&lt;/p&gt;
 
 &lt;p&gt;整个项目结构如下：
-&lt;img src=&quot;/cool-panda/assets/images/jekyll-architecture.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/assets/images/jekyll-architecture.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate>
