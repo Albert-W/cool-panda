@@ -107,14 +107,14 @@
   }
 
     .navigation-wrapper {
-      // display: inline-block;
-      // display: inline;
-      // position: relative;
-      // float: left;
+      // display: none;
+      // // display: block;
+      // position: fixed;
+      // // float: left;
       // top: 0;
       // right: 0;
       // left: 0;
-      // width: 30%;
+      // width: 100%;
       // padding: 20px 0;
       // background: rgba($gray-darkest,.98);
       // border-bottom: 1px solid rgba(255,255,255,.15);
@@ -136,7 +136,7 @@
         width: 100%;
 
         li {
-          width: 80%;
+          // width: 80%;
           margin-bottom: .4em;
         }
 
@@ -170,7 +170,7 @@
     }
 
     .navigation__item {
-      width: 100%;
+      // width: 100%;
       margin: 0 0 .4em 0;
     }
 

@@ -90,7 +90,7 @@ h5 {
 
 h1 {
   margin-top: 0;
-  font-size: 2.5em;
+  font-size: 2.0em;
   line-height: 1.2em;
   letter-spacing: .05em; }
 
@@ -98,7 +98,17 @@ h2 {
   font-size: 2.0em; }
 
 h3 {
-  font-size: 1.6em; }
+  font-size: 1.2em;
+  text-indent: 4px;
+  border-radius: 4px;
+  padding: 6px 15px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  background: #B9D3EE;
+  /*0px right, 5px botton, 5px fuzzy*/
+  box-shadow: 0px 5px 5px #9FB6CD;
+  border-left: 6px solid #1874CD;
+  position: relative; }
 
 h4 {
   font-size: 1.2em; }
@@ -416,7 +426,7 @@ hr {
   vertical-align: middle;
   position: relative;
   z-index: 800;
-  padding: 0 60px; }
+  padding: 0 0px; }
 
 .panel-main__content {
   max-width: 620px;
@@ -437,7 +447,8 @@ hr {
     color: #FFF; }
 
 .cover-navigation {
-  margin-top: 42px; }
+  margin-top: 0px;
+  width: 100%; }
 
 .cover-navigation--social {
   margin-left: 30px; }
@@ -476,9 +487,7 @@ hr {
   background: none; }
 
 .btn, .navigation__item a {
-  padding: 10px 20px;
-  border: 1px solid #2568A3;
-  border-radius: 20px;
+  padding: 5px 5px 5px 5px;
   font-size: .9em;
   font-weight: bold;
   letter-spacing: 1px;
@@ -490,8 +499,6 @@ hr {
     border-color: #174065; }
 
 .btn-border-small {
-  border: 1px solid #2568A3;
-  border-radius: 20px;
   padding: 6px 8px;
   font-size: .8em;
   margin-left: 10px; }
@@ -543,18 +550,16 @@ nav {
 
 .navigation {
   display: inline-block;
-  float: left;
   position: relative;
   margin: 0;
   list-style-type: none; }
 
 .navigation__item {
-  display: inline-block;
-  margin: 5px 1px 0 0;
+  display: inline;
+  margin: 5px 5px 5px 5px;
   line-height: 1em; }
   .navigation__item a {
-    display: block;
-    position: relative;
+    display: inline-block;
     border-color: #FFF;
     color: #FFF;
     opacity: .8; }
@@ -823,7 +828,6 @@ input[type="tel"] {
       display: block;
       width: 100%; }
       .cover-navigation .navigation li {
-        width: 80%;
         margin-bottom: .4em; }
     .cover-navigation.navigation--social {
       padding-top: 5px; }
@@ -841,7 +845,6 @@ input[type="tel"] {
     margin-left: 0; }
 
   .navigation__item {
-    width: 100%;
     margin: 0 0 .4em 0; } }
 @media all and (max-width: 340px) {
   .panel-main__inner {

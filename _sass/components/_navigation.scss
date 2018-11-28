@@ -5,20 +5,23 @@ nav {
 
 .navigation {
   display: inline-block;
-  float: left;
+  // float: center;
   position: relative;
   margin: 0;
   list-style-type: none;
 }
 
   .navigation__item {
-    display: inline-block;
-    margin: 5px 1px 0 0;
+    // display: inline-block;
+    display: inline;
+    // margin: 5px 5px 0 0;
+    margin: 5px 5px 5px 5px;
     line-height: 1em;
+    // width: 25%;
 
     a {
-      display: block;
-      position: relative;
+      display: inline-block;
+      // position: relative;
       @extend .btn;
       border-color: #FFF;
       color: #FFF;

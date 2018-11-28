@@ -93,7 +93,8 @@
     vertical-align: middle;
     position: relative;
     z-index: 800;
-    padding: 0 60px;
+    // padding: 0 60px;
+    padding: 0 0px;
   }
 
   .panel-main__content {
@@ -124,7 +125,9 @@
 // ------------------------------
 
 .cover-navigation {
-  margin-top: 42px;
+  // margin-top: 42px;
+  margin-top: 0px;
+  width:100%
 }
 
   .cover-navigation--social {
