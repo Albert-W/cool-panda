@@ -16,6 +16,8 @@ body {
   font-size: 1em;
   color: $gray-darker;
   -webkit-font-smoothing: antialiased;
+  // overflow:hidden;
+  overflow:scroll; //避免不同页面比例不同。
 }
 
 ::selection {
