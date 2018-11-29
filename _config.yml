@@ -26,8 +26,9 @@ blog_button:
 # Navigation buttons in the front page.
 nav:
     - {title: List, description: List, url: '/list'}
-    - {title: EBook 1, description: live and learn, url: 'https://albert-w.github.io/live-and-learn/'}
-    - {title: EBook 2, description: Exchristian, url: 'https://exchristian.github.io/'}
+    - {title: About, description: About me, url: '/about'}
+    # - {title: EBook 1, description: live and learn, url: 'https://albert-w.github.io/live-and-learn/'}
+    # - {title: EBook 2, description: Exchristian, url: 'https://exchristian.github.io/'}
     # - {title: Tiny Tool, description: Fold Locker, url: 'https://albert-w.github.io/Folder-locker/'}
 
 # Pagination
