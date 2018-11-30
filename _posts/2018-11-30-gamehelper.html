@@ -1,0 +1,99 @@
+---
+layout: page
+title : 小地图提示器
+
+---
+
+<style type="text/css">
+    #reminder {
+        margin: 30px;
+        /* background: #1fa7be; */
+        text-align: center;
+    }
+
+    #input {
+        background: rgba(89, 139, 212, 0.3);
+        border: none;
+        text-align: center;
+        /* margin: 10px; */
+        width: 30px;
+        /* display: inline;  */
+    }
+
+    button {
+        margin: 20px;
+        padding: 5px, 30px !important
+    }
+
+    p {}
+</style>
+
+
+<div id='reminder'>
+    <audio id="audio" src='/assets/chimes.wav'></audio>
+    <h4>优秀的游戏玩家看小地图的频率不低于10秒每次</h4>
+    <br>
+    <p>请输入时间间隔，单位秒</p>
+    <input type="text" id='input' , value='10'>
+    <br>
+    <button id='start'>开始</button>
+    <button id='end'>结束</button>
+    <p id='last'></p>
+</div>
+
+<script type="text/javascript">
+    var start = $('#start'),
+        end = $('#end'),
+        input = $('#input'),
+        audio = $('#audio')[0],
+        last = $('#last'),
+        time = input.val(),
+        t = null;
+    i = 0;
+
+    input.focus(function () {
+        clearInterval(t)
+        if ($(this).val() == time) {
+            $(this).val('');
+        }
+    })
+
+    input.blur(function () {
+        if ($(this).val() == '') {
+            $(this).val(time);
+        }
+        time = input.val();
+    })
+
+    start.on('click', function () {
+        clearInterval(t)
+        t = setInterval(function () {
+            if (i % parseInt(time) === parseInt(time) - 1) {
+                audio.play();
+            }
+            i++;
+            last.html('进度指示：' + i % parseInt(time))
+        }, 1000)
+
+    })
+
+    end.on('click', function () {
+        clearInterval(t);
+    })
+
+
+
+
+    //通过定时器实现
+    // start.on('click',function(){
+    //     clearInterval(timer);
+    //     timer = setInterval(() => {
+    //         audio.play();
+    //     }, parseInt(time)*1000);
+    // })
+
+    // end.on('click',function(){
+    //     clearInterval(timer);
+    //     // audio.pause();
+    // })
+</script>
