@@ -861,3 +861,8 @@ input[type="tel"] {
   .btn, .navigation__item a {
     display: block;
     margin-bottom: .4em; } }
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  border: 1px solid #888; }

@@ -90,5 +90,24 @@ $(document).ready(function () {
 
   //   $('.btn-mobile-menu__icon').toggleClass('fa fa-list fa fa-angle-up animated fadeIn');
   // });
+
+  var backButton = $('.back-to-top');
+  backButton.on('click', function () {
+    // console.log('back');
+    $('html, body').animate({
+      scrollTop: 0
+    }, 800)
+    // backButton.fadeOut();
+  })
+
+
+  $(window).on('scroll', function (){
+    if($(window).scrollTop() > $(window).height() )
+      backButton.fadeIn();
+    else
+      backButton.fadeOut();
+  })
+
+  $(window).trigger('scroll');
   
 });
