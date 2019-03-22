@@ -1,3 +1,4 @@
+run in linux
 git init
 git checkout -b gh-pages
 git add .
