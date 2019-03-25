@@ -3,6 +3,7 @@ backend:
   repo: Albert-W/cool-panda
   branch: gh-pages # Branch to update (master by default) 
   # site_domain: flamboyant-lamport-a70583
+  site_url: http://coolpanda.ml/
 
 # display_url: 
 media_folder: "/assets/images" # Folder where user uploaded files should go
@@ -10,6 +11,8 @@ media_folder: "/assets/images" # Folder where user uploaded files should go
 #   encoding: "ascii"
 #   clean_accents: true
 publish_mode: editorial_workflow
+
+# Main_page:
 
 collections: # A list of collections the CMS should be able to edit
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
