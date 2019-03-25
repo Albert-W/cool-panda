@@ -3,8 +3,9 @@ backend:
   repo: Albert-W/cool-panda
   branch: gh-pages # Branch to update (master by default) 
   # site_domain: flamboyant-lamport-a70583
-  site_url: http://coolpanda.ml/
-  Display_url: http://coolpanda.ml/
+
+site_url: http://coolpanda.ml/
+  # Display_url: http://coolpanda.ml/
 
 # display_url: 
 media_folder: "/assets/images" # Folder where user uploaded files should go
