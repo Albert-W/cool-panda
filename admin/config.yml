@@ -4,7 +4,7 @@ backend:
   branch: gh-pages # Branch to update (master by default) 
   # site_domain: flamboyant-lamport-a70583
 
-site_url: http://coolpanda.ml/
+site_url: https://coolpanda.ml/
 # Display_url: http://coolpanda.ml/
 
 # display_url: 
