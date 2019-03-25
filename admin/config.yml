@@ -9,25 +9,25 @@ media_folder: "/assets/images" # Folder where user uploaded files should go
 # slug:
 #   encoding: "ascii"
 #   clean_accents: true
-# publish_mode: editorial_workflow
+publish_mode: editorial_workflow
 
 collections: # A list of collections the CMS should be able to edit
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
     folder: "/_posts" # The path to the folder where the documents are stored
-    sort: "date:desc" # Default is title:asc
+    # sort: "date:desc" # Default is title:asc
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields: # The fields each document in this collection have
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss Z"}
       - {label: "Website", name: "website", widget: "string", default: ""}
+      - {label: "Body", name: "body", widget: "markdown"}
       # - {label: "Display", name: "display", widget: "select", options: ["normal", "sticky", "hide"], default: "normal"}
-      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
       # - {label: "Tags", name: "tags", widget: "string", required: true}
       # - {label: "Emoji-Tag", name: "emotag", widget: "string", required: false}
-      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss Z"}
-      - {label: "Body", name: "body", widget: "markdown"}
       # - {label: "Comment", name: "comment", widget: "boolean", default: true}
-      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       # - {label: "Component", name: "component", widget: "string", default: ""}
     meta: # Meta data fields. Just like fields, but without any preview element
   # - name: "pages"
