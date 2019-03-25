@@ -2,7 +2,7 @@ backend:
   name: github
   repo: Albert-W/cool-panda
   branch: gh-pages # Branch to update (master by default) 
-  site_domain: flamboyant-lamport-a70583
+  # site_domain: flamboyant-lamport-a70583
 
 # display_url: 
 media_folder: "uploads" # Folder where user uploaded files should go
