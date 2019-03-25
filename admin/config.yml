@@ -1,7 +1,7 @@
 backend:
   name: github
-  repo: xujinkai/xujinkai.github.io
-  branch: master # Branch to update (master by default)
+  repo: Albert-W/cool-panda
+  branch: gh-pages # Branch to update (master by default)
 
 # display_url: 
 media_folder: "uploads" # Folder where user uploaded files should go
