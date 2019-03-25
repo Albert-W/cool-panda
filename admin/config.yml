@@ -20,7 +20,7 @@ collections: # A list of collections the CMS should be able to edit
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields: # The fields each document in this collection have
       - {label: "Website", name: "website", widget: "string", default: ""}
-      - {label: "Display", name: "display", widget: "select", options: ["normal", "sticky", "hide"], default: "normal"}
+      # - {label: "Display", name: "display", widget: "select", options: ["normal", "sticky", "hide"], default: "normal"}
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
       # - {label: "Tags", name: "tags", widget: "string", required: true}
       # - {label: "Emoji-Tag", name: "emotag", widget: "string", required: false}
