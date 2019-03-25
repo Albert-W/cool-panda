@@ -17,6 +17,8 @@ publish_mode: editorial_workflow
 # Main_page:
 
 collections: # A list of collections the CMS should be able to edit
+  - name: "Main Page" : http://coolpanda.ml/
+
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
     folder: "/_posts" # The path to the folder where the documents are stored
