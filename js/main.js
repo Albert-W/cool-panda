@@ -1,5 +1,24 @@
 $(document).ready(function () {
+  // var context = new AudioContext();
   var paner_cover = $('.panel-cover');
+  // var aud =document.getElementById("aud");
+  // aud.play(); chrome 下会报错
+  // aud.play();
+  var logo = $('.panel-cover__logo');
+
+  // aud.oncanplaythrough = function(){
+  //   aud.play();
+  // };
+  // function playmusic(){
+  //   if(aud.paused){
+  //     aud.play();
+  //   } else {
+  //     aud.pause();
+  //     // logo.removeClass('-webkit-animation');
+  //   }
+  // }
+  // setTimeout(playmusic,1);
+
   function panelState() {
     if (paner_cover.hasClass('panel-cover--collapsed')) {
       // $('.navigation__item:first').hide();
@@ -53,6 +72,18 @@ $(document).ready(function () {
       }, 400, swing = 'swing', function () {});
     }
   });
+
+  var aud = document.getElementById("aud");
+  logo.click(function(){
+      if(aud.paused){
+        aud.play();
+        this.style.animationPlayState = "running";
+      } else {
+        aud.pause();
+        this.style.animationPlayState = "paused";
+
+      }
+  })
 
   if (window.location.hash && window.location.hash == "#blog") {
     $('.navigation__item:first').hide();
@@ -111,3 +142,13 @@ $(document).ready(function () {
   $(window).trigger('scroll');
   
 });
+
+
+
+// 状态设置
+
+// if(aud.paused){
+//   this.style.animationPlayState = "paused";
+// } else {
+//   this.style.animationPlayState = "running";
+// }
