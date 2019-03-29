@@ -867,7 +867,7 @@ input[type="tel"] {
   right: 30px;
   border: 1px solid #888; }
 
-.panel-cover__logo {
+  .rotate{
   -webkit-animation: circle 4s infinite linear; }
 
 @-webkit-keyframes circle {

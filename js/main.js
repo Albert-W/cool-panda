@@ -1,23 +1,7 @@
 $(document).ready(function () {
-  // var context = new AudioContext();
-  var paner_cover = $('.panel-cover');
-  // var aud =document.getElementById("aud");
-  // aud.play(); chrome 下会报错
-  // aud.play();
-  var logo = $('.panel-cover__logo');
 
-  // aud.oncanplaythrough = function(){
-  //   aud.play();
-  // };
-  // function playmusic(){
-  //   if(aud.paused){
-  //     aud.play();
-  //   } else {
-  //     aud.pause();
-  //     // logo.removeClass('-webkit-animation');
-  //   }
-  // }
-  // setTimeout(playmusic,1);
+  var paner_cover = $('.panel-cover');
+  var logo = $('.panel-cover__logo');
 
   function panelState() {
     if (paner_cover.hasClass('panel-cover--collapsed')) {
@@ -73,17 +57,7 @@ $(document).ready(function () {
     }
   });
 
-  var aud = document.getElementById("aud");
-  logo.click(function(){
-      if(aud.paused){
-        aud.play();
-        this.style.animationPlayState = "running";
-      } else {
-        aud.pause();
-        this.style.animationPlayState = "paused";
 
-      }
-  })
 
   if (window.location.hash && window.location.hash == "#blog") {
     $('.navigation__item:first').hide();
@@ -132,23 +106,80 @@ $(document).ready(function () {
   })
 
 
-  $(window).on('scroll', function (){
-    if($(window).scrollTop() > $(window).height() )
+  $(window).on('scroll', function () {
+    if ($(window).scrollTop() > $(window).height())
       backButton.fadeIn();
     else
       backButton.fadeOut();
   })
 
   $(window).trigger('scroll');
+
+  // Music Control System---------------------------------------
+  var aud = document.getElementById("aud");
+  aud.addEventListener("ended", function (event) {
+    logo.setAttribute("class", "panel-cover__logo logo");
+  }, false);
+
+  aud.addEventListener("paused", function (event) {
+    logo.setAttribute("class", "panel-cover__logo logo");
+  }, false);
+
+  logo.click(function () {
+    if (aud.paused) {
+      aud.play();
+      this.style.animationPlayState = "running";
+      // logo.setAttribute("class", "panel-cover__logo logo rotate");
+      logo.attr("class", "panel-cover__logo logo rotate");
+    } else {
+      aud.pause();
+      this.style.animationPlayState = "paused";
+      // logo.setAttribute("class", "panel-cover__logo logo ");
+      // logo.attr("class", "panel-cover__logo logo ");
+
+    }
+  })
+
+  // Music Control System---------------------------------------
+
+  // Single Page Website----------------------------------------
   
+
+
+
+
+  // Single Page Website----------------------------------------
+
+
 });
 
+// Single Page Route------------------------
+(function () {
+  var Router = function () {
+    this.routes = {}; //保存路由
+    this.curUrl = ''; //获取当前的hash值
+  }
+  Router.prototype.init = function () {
+    //hashchange事件，当hash变化时，调用reloadPage方法
+    //第一个this指向window，bind里面的this指向调用这个函数的对象，具体使用方法可以百度
+    window.addEventListener('hashchange', this.reloadPage.bind(this));
+  }
 
+  Router.prototype.reloadPage = function () {
+    this.curUrl = location.hash.substring(1) || '/'; //获取当前hash的值（去掉#）
+    this.routes[this.curUrl](); //运行当前hsah值对应的函数
+  }
 
-// 状态设置
-
-// if(aud.paused){
-//   this.style.animationPlayState = "paused";
-// } else {
-//   this.style.animationPlayState = "running";
-// }
+  Router.prototype.map = function (key, callback) { //保存路由对应的函数：
+    this.routes[key] = callback; //key表示hash的值（去掉#），callback表示当前hash对应的函数
+  }
+  window.oRou = Router;
+})()
+var oRouter2 = new oRou();
+oRouter2.init();
+oRouter2.map('/about', function () {
+  var oSidebar = document.getElementsByClassName("content-wrapper__inner")[0];
+  // oSidebar.innerHTML = '我是about页面';
+  oSidebar.innerHTML = "http://127.0.0.1:4000/about"; //list is not defined; 
+})
+// Single Page Route------------------------
