@@ -22,11 +22,12 @@ cover_color: blue
 blog_button:
     title: Blog
     description: Visit blog
+    url: '/webs/index'
 
 # Navigation buttons in the front page.
 nav:
-    - {title: List, description: List, url: '/list'}
-    - {title: About, description: About me, url: '/about'}
+    - {title: List, description: List, url: '/webs/list'}
+    - {title: About, description: About me, url: '/webs/about'}
     - {title: Admin, description: Backend management system, url: '/admin'}
     # - {title: EBook 1, description: live and learn, url: 'https://albert-w.github.io/live-and-learn/'}
     # - {title: EBook 2, description: Exchristian, url: 'https://exchristian.github.io/'}
@@ -36,7 +37,8 @@ nav:
 # gems: [jekyll-paginate]
 plugins: [jekyll-paginate]
 paginate: 5
-paginate_path: "page/:num/"
+paginate_path: "webs/page/:num/"
+# paginate_path: "page/:num/"
 
 # Comment
 comment:
@@ -56,3 +58,5 @@ social:
 ga:
     # id: your_ga_id
     # host: your_host
+
+exclude: ["xxx", "changelog.md", "nohup.out"]    

@@ -1,4 +1,7 @@
-<header class="panel-cover {% if page.layout == 'post' or page.layout == 'page' %}panel-cover--collapsed{% endif %}"
+<header class="panel-cover 
+  {% if page.layout == 'post' or page.layout == 'page' or page.layout == 'default'  %}
+  panel-cover--collapsed
+  {% endif %}"  
   style="background-image: url('{{site.baseurl}}/assets/images/background-cover.jpg')">
   <div class="panel-main">
 
@@ -13,8 +16,12 @@
         
 
         <h1 class="panel-cover__title panel-title">
-          <a href="{{site.baseurl}}/#blog" title="link to homepage for {{ site.title }}"
-            class="blog-button">{{site.title}}</a>
+          <a 
+            href="{{site.baseurl}}{{site.blog_button.url}}"
+            title="link to homepage for {{ site.title }}"
+            class="blog-button">{{site.title}}
+          </a>
+            <!-- <p>{{site.blog_button.url}}</p> -->
         </h1>
 
         {% if site.subtitle  %}
@@ -34,7 +41,7 @@
             <nav class="cover-navigation cover-navigation--primary">
               <ul class="navigation">
                 <li class="navigation__item">
-                  <a href="{{site.baseurl}}/#blog" title="{{site.blog_button.description}}"
+                  <a href="{{site.baseurl}}{{site.blog_button.url}}" title="{{site.blog_button.description}}"
                     class="blog-button">{{site.blog_button.title}}
                   </a>
                 </li>
@@ -67,3 +74,4 @@
     {% endif %}
   </div>
 </header>
+<script type="text/javascript" src="{{site.baseurl}}/js/music.js"></script>

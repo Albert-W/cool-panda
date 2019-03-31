@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: 
 title : 关于我
 ---
 
@@ -19,11 +19,13 @@ title : 关于我
 
 如果你还愿意扫码支持我，我会不胜感激。
 
+[Web Page](webs\page\2\index.html)
 
-<img src="assets\images\wechatcode.jpg" width="500" height="500" />
+
+<img src="\assets\images\wechatcode.jpg" width="500" height="500" />
 
 
-<img src="assets\images\alipaycode.jpg" width="500" height="700" />
+<img src="\assets\images\alipaycode.jpg" width="500" height="700" />
 
 
 

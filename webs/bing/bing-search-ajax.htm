@@ -1,0 +1,197 @@
+<html>
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+	<title>bing search</title>
+	<style type="text/css">
+		body {
+			background-color: #333;
+		}
+
+		.bg-div {
+			position: relative;
+			background-image: url(river.jpg);
+			width: 1228px;
+			height: 690px;
+			margin: 0 auto;
+		}
+
+		.logo {
+			background-image: url(logo.png);
+			height: 53px;
+			width: 107px;
+			float: left;
+			margin: -4px 18px 0 0;
+		}
+
+		.search-form {
+			float: left;
+			background-color: #fff;
+			padding: 5px;
+		}
+
+		.search-text {
+			height: 25px;
+			line-height: 25px;
+			float: left;
+			width: 350px;
+			border: 0;
+			outline: none;
+		}
+
+		.search-button {
+			background-image: url(search-button.png);
+			width: 29px;
+			height: 29px;
+			float: left;
+			border: 0
+		}
+
+		.search-box {
+			position: absolute;
+			top: 150px;
+			left: 200px;
+		}
+
+		.suggest {
+			width: 388px;
+			background-color: #fff;
+			position: absolute;
+			margin: 0;
+			padding: 0;
+			border-width: 1px;
+			border-style: solid;
+			border-color: #999;
+		}
+
+		.suggest ul {
+			list-style: none;
+			display: block;
+			margin: 0;
+			padding: 0
+		}
+
+		.suggest ul li {
+			padding: 3px;
+			line-height: 25px;
+			font-size: 14px;
+			color: #777;
+			cursor: pointer;
+			padding: 3px;
+		}
+
+		.suggest ul li:hover {
+			background-color: #e5e5e5;
+			text-decoration: underline;
+		}
+
+		.suggest strong {
+			color: #000;
+		}
+
+		.clearfix:after {
+			display: block;
+			clear: both;
+			content: "";
+			visibility: hidden;
+			height: 0px;
+		}
+
+		.clearfix {
+			zoom: 1
+		}
+
+		.nav {
+			margin: 0 auto;
+			width: 1228px;
+		}
+
+		.nav ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.nav ul li {
+			float: left;
+			padding: 10px;
+		}
+
+		.nav ul li a {
+			color: #999;
+			text-decoration: none;
+			font-size: 12px;
+			font-weight: bold;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="nav">
+		<ul class="clearfix">
+			<li><a href="#">图片</a></li>
+			<li><a href="#">视频</a></li>
+			<li><a href="#">词典</a></li>
+			<li><a href="#">咨询</a></li>
+			<li><a href="#">地图</a></li>
+			<li><a href="#">影响力</a></li>
+			<li><a href="#">更多</a></li>
+		</ul>
+	</div>
+	<div class="bg-div">
+		<div class="search-box">
+			<div class="logo"></div>
+
+			<form class="search-form" action="https://cn.bing.com/search" target="_blank" id="search-form">
+				<input type="text" class="search-text" name="q" id="search_input" autocomplete="off" />
+				<input type="submit" class="search-button" value="" />
+			</form>
+
+		</div>
+	</div>
+	<div class="suggest" id="search-suggest" style="display:none">
+		<ul id="search-result">
+			<li> 搜索内容 </li>
+			<li> 搜索内容 </li>
+		</ul>
+	</div>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script>
+		$('#search_input').bind('keyup', function () {
+			//get user's input value; 
+			var jqueryInput = $(this);
+			var searchText = jqueryInput.val();
+			$.get('http://api.bing.com/qsonhs.aspx?q=' + searchText),function(d){
+				var d = d.AS.Results[0].Suggests;
+				var html='';
+				for (var i=0;i<d.length;i++){
+					html+='<li>' + d[i].Txt+'</li>';
+				}
+				$('#serch-result').html(html);
+			};
+
+			$('#search-suggest').css({
+			top: $('#search-form').offset().top + $('#search-form').height() + 10,
+			left: $('#search-form').offset().left
+		}).show();
+		});
+
+
+		$(document).bind('click',function(){
+			$('#search-suggest').hide();
+		});
+
+		$(document).delegate('li','click',function(){
+			var keyword = $(this).text();
+			location.href = 'http://cn.bing.com/search?q='+keyword;
+		});
+
+	</script>
+</body>
+
+</html>

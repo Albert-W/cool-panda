@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: 
 title : 文章列表
 header : 所有文章
 group: navigation
@@ -26,8 +26,7 @@ Usage:
       2) Next make sure to change 'post.previous.date' to:
         => 'post.next.date'
         
--->{%
-endcomment %}
+-->{%endcomment %}
 
 {% if site.JB.posts_collate.provider == "custom" %}
 {% include custom/posts_collate %}
@@ -78,3 +77,5 @@ endcomment %}
         {% assign posts_collate = nil %}
 </div>
 </div>
+
+<script type="text/javascript" src="{{site.baseurl}}/js/spa.js"></script>
