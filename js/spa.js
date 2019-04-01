@@ -8,9 +8,9 @@ $(document).ready(function () {
     // var host = document.domain
     // console.log(host)
 
-    console.log(pageRef.indexOf("http"));
+    console.log(pageRef.indexOf("/") + "pageRef.indexOf("/")");
     // e.preventDefault( );
-    if (pageRef.indexOf("http") == -1) {
+    if (pageRef.indexOf("/") == 0) {
       $('.panel-cover').addClass('panel-cover--collapsed')
       e.preventDefault();
       callPage(pageRef);
