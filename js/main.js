@@ -2,20 +2,7 @@ $(document).ready(function () {
 
   var paner_cover = $('.panel-cover');
   
-  function panelState() {
-    if (paner_cover.hasClass('panel-cover--collapsed')) {
-      // $('.navigation__item:first').hide();
-      $('.panel-cover-welcome').addClass('hidden');
-      $('.panel-cover__subtitle').addClass('hidden');
-      $('.main-post-list').removeClass('hidden');
-      return;
-    } else {
-      $('.panel-cover-welcome').removeClass('hidden');
-      $('.panel-cover__subtitle').removeClass('hidden');
-      $('.main-post-list').addClass('hidden');
-      return;
-    }
-  }
+
   panelState();
 
   //处于列表页时，隐藏List;
@@ -127,3 +114,18 @@ $(document).ready(function () {
 
   
 });
+
+function panelState() {
+  if (paner_cover.hasClass('panel-cover--collapsed')) {
+    // $('.navigation__item:first').hide();
+    $('.panel-cover-welcome').addClass('hidden');
+    $('.panel-cover__subtitle').addClass('hidden');
+    $('.main-post-list').removeClass('hidden');
+    return;
+  } else {
+    $('.panel-cover-welcome').removeClass('hidden');
+    $('.panel-cover__subtitle').removeClass('hidden');
+    $('.main-post-list').addClass('hidden');
+    return;
+  }
+}
