@@ -1,7 +1,6 @@
 $(document).ready(function () {
 
   var paner_cover = $('.panel-cover');
-  
   function panelState() {
     if (paner_cover.hasClass('panel-cover--collapsed')) {
       // $('.navigation__item:first').hide();
@@ -16,6 +15,7 @@ $(document).ready(function () {
       return;
     }
   }
+
   panelState();
 
   //处于列表页时，隐藏List;
@@ -127,3 +127,4 @@ $(document).ready(function () {
 
   
 });
+
