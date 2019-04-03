@@ -16,19 +16,20 @@ $ bundler exec jekyll serve
 ```
 jekyll 启动网络服务器，点击 http://127.0.0.1:4000 就可查看网站。
 
-项目全局配置文件是 _config.yml， 主入口文件是根目录下的index.html, 主页面布局文件是 _layouts/default.html。
+项目全局配置文件是 _config.yml， 主入口文件是根目录下的index.html。
+<!-- 主页面布局文件是 _layouts/default.html。 -->
 
-整个项目结构如下：
-![](assets/images/jekyll-architecture.jpg)
+<!-- 整个项目结构如下： -->
+<!-- ![](assets/images/jekyll-architecture.jpg) -->
 
 
 ### 项目展示
 
 在线展示: [cool panda](http://coolpanda.ml/)
 
-离线展示
-![](assets/images/index.jpg)
-![](assets/images/blog.jpg)
+<!-- 离线展示 -->
+<!-- ![](assets/images/index.jpg) -->
+<!-- ![](assets/images/blog.jpg) -->
 
 ### Licence
 
