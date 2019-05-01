@@ -1,6 +1,6 @@
 $(document).ready(function () {
       // Single Page Website----------------------------------------
-  console.log("hello");
+  console.log("hello Spa.js");
   $('a').on('click', function (e) {
     e.stopPropagation();
     var pageRef = $(this).attr('href'); //return string
@@ -26,7 +26,7 @@ function callPage(url) {
     type: "GET",
     dataType: "text",
     success: function (response) {
-      console.log('the page was loaded', response);
+      // console.log('the page was loaded', response);
       // console.log('the page was loaded');
       $('.content-wrapper__inner').html(response);
       var state = {
