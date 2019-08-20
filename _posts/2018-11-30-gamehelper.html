@@ -34,7 +34,7 @@ title : 小地图提示器
     <h4>优秀的游戏玩家看小地图的频率不低于10秒每次</h4>
     <br>
     <p>请输入时间间隔，单位秒</p>
-    <input type="text" id='input' , value='10'>
+    <input type="text" id='input' , value='5'>
     <br>
     <button id='start'>开始</button>
     <button id='end'>结束</button>
@@ -42,46 +42,41 @@ title : 小地图提示器
 </div>
 
 <script type="text/javascript">
-    var start = $('#start'),
-        end = $('#end'),
-        input = $('#input'),
-        audio = $('#audio')[0],
-        last = $('#last'),
-        time = input.val(),
-        t = null;
-    i = 0;
+    var start = document.getElementById('start');
+    var end = document.getElementById('end');
+    var input = document.getElementById('input');
+    var audio = document.getElementById('audio');
+    var last = document.getElementById('last');
+    var time = input.value;
+    var t = null;
+    var i = 0;
 
-    input.focus(function () {
+    input.addEventListener("focus",function(){
         clearInterval(t)
-        if ($(this).val() == time) {
-            $(this).val('');
+        if (input.value == time) {
+            input.value="";
         }
     })
-
-    input.blur(function () {
-        if ($(this).val() == '') {
-            $(this).val(time);
+    input.addEventListener("focus",function(){
+        if(input.value == ""){
+            input.value=time;
         }
-        time = input.val();
+        time = input.value;
     })
-
-    start.on('click', function () {
+    start.addEventListener("click",function(){
         clearInterval(t)
         t = setInterval(function () {
             if (i % parseInt(time) === parseInt(time) - 1) {
                 audio.play();
             }
             i++;
-            last.html('进度指示：' + i % parseInt(time))
-        }, 1000)
-
+            last.innerHTML = '进度指示：' + i % parseInt(time);
+        }, 1000)    
     })
 
-    end.on('click', function () {
+    end.addEventListener("click",function(){
         clearInterval(t);
     })
-
-
 
 
     //通过定时器实现
