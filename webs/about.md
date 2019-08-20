@@ -1,5 +1,5 @@
 ---
-layout: 
+layout: post
 title : 关于我
 ---
 
@@ -19,7 +19,7 @@ title : 关于我
 
 如果你还愿意扫码支持我，我会不胜感激。
 
-[Web Page](webs\page\2\index.html)
+<!-- [Web Page](webs\page\2\index.html) -->
 
 
 <img src="\assets\images\wechatcode.jpg" width="500" height="500" />

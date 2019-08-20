@@ -1,11 +1,27 @@
 ---
-layout: index
+layout:
+discription: This is the entry point.
 ---
 
-<!-- {% include abstracts.html %} -->
-<div id="page1">
+<!DOCTYPE html>
+<html>
 
-</div>
+  {% include head.html %}
+  <body>
+    
+    {% include side-panel.html %}
+    <div class="content-wrapper">
+        <div id="page1">
+
+        </div>
+        {% include footer.html %}
+    </div>
+
+  </body>
+</html>
+
+
 <script>
+    // load paginate file. 
     $('#page1').load("webs/index");
 </script>

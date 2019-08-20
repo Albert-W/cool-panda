@@ -1,4 +1,5 @@
-$(document).ready(function () {
+// $(document).DOMSubtreeModified(function () {
+document.body.addEventListener("DOMSubtreeModified",function(){
       // Single Page Website----------------------------------------
   console.log("hello Spa.js");
   $('a').on('click', function (e) {
@@ -14,6 +15,7 @@ $(document).ready(function () {
       $('.panel-cover').addClass('panel-cover--collapsed')
       e.preventDefault();
       callPage(pageRef);
+      document.documentElement.scrollTop=0
     }
   });
   // Single Page Website----------------------------------------
@@ -28,7 +30,8 @@ function callPage(url) {
     success: function (response) {
       // console.log('the page was loaded', response);
       // console.log('the page was loaded');
-      $('.content-wrapper__inner').html(response);
+      
+      $('.content-wrapper').html(response);
       var state = {
         title: '',
         url: window.location.href

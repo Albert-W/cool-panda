@@ -1,37 +1,33 @@
----
-layout: 
----
-
-<article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if page.website %}
-      <a href={{page.website}} target="_blank">
-        {{ page.title }}
-      </a>
-      {% else %}
-      {{ page.title }}
-      {%endif%}
-
-    </h1>
-    <div class="post-meta">
-      <time datetime="{{page.date | date: date_to_xmlschema}}" itemprop="datePublished" class="post-meta__date date">{{page.date | date: "%F"}}</time> &#8226; <span class="post-meta__tags tags">{{page.tags | join:' '}}</span>
-      
-    </div>
-    
-  </header>
-
-  <section class="post">
-    {{ content }}
-  </section>
+<!-- --- layout: --- -->
 
 
+<link rel="stylesheet" href="{{site.baseurl}}/css/poster.css">
+<article class="post-container " itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">
+        <h1 class="post-title">
+            {% if page.website %}
+            <h1>{{ page.title }}</h1>
+            {% else %} {{ page.title }} {%endif%}
+
+        </h1>
+        <div class="post-meta">
+            <time datetime="{{page.date | date: date_to_xmlschema}}" itemprop="datePublished" class="post-meta__date date">{{page.date | date: "%F"}}</time> &#8226; <span class="post-meta__tags tags">{{page.tags | join:' '}}</span>
+
+        </div>
+
+    </header>
+
+    <section class="post">
+        {{ content }}
+    </section>
+
+    {% include read-more.html %}
 
 </article>
 
-{% include read-more.html %}
 
-<script type="text/javascript" src="{{site.baseurl}}/js/spa.js"></script>
+
+
 <!-- {% include pagination.html %} -->
 
 <!-- <button class="back-to-top">Back to top</button> -->

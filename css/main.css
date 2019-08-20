@@ -1,9 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-/* @import url(animate.css);
-@import url(tomorrow.css); */
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -38,6 +33,7 @@ table {
   border-spacing: 0; }
 
 body {
+  height: 100%;
   width: 100%;
   *zoom: 1; }
   body:before, body:after {
@@ -118,10 +114,6 @@ h4 {
   background: #B9D3EE;
 }
 
-h4 {
-  font-size: 1.1em; 
-  background: #B9D3EE;
-}
 
 h5 {
   font-size: 1em; 
@@ -273,21 +265,18 @@ td:last-child {
   text-align: center;
   color: #FFF; }
 
-.container {
-  position: relative;
-  z-index: 500;
-  width: 940px;
-  margin: 0 auto; }
-
 .content-wrapper {
   z-index: 800;
-  width: 70%;
-  margin-left: 30%; }
+  box-sizing:border-box;
+  width: 75%;
+  float: right; 
+  /* padding: 40px 70px; */
+  
+}
 
-.content-wrapper__inner {
-  margin: 0 10%;
-  padding: 50px 0;
-  max-width: 850px; }
+.post-container,.list-container {
+  margin: 40px 70px;
+}
 
 .footer {
   display: block;
@@ -386,7 +375,6 @@ hr {
   -webkit-font-smoothing: antialiased; }
 
 .panel-cover {
-  display: block;
   position: fixed;
   z-index: 900;
   width: 100%;
@@ -396,8 +384,11 @@ hr {
   background-size: cover; }
 
 .panel-cover--collapsed {
+  position:fixed;
   width: 25%;
-  max-width: 700px; }
+  max-width: 700px; 
+  box-sizing:border-box;
+}
 
 .panel-cover--overlay {
   display: block;
@@ -849,9 +840,9 @@ input[type="tel"] {
     max-width: none;
     margin: 0 auto; }
 
-  .content-wrapper__inner {
+  /* .content-wrapper__inner {
     margin-right: 0;
-    margin-left: 0; }
+    margin-left: 0; } */
 
   .navigation__item {
     margin: 0 0 .4em 0; } }
