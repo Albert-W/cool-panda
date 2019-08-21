@@ -2,7 +2,7 @@
 layout: post
 title: 如何使用jekyll搭建自己的个人博客
 date: 2018-11-21
-tags:tech, 
+tags: tech, 
 ---
 
 工欲善其事，必行利其器。
