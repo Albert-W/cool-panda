@@ -15,6 +15,7 @@ document.body.addEventListener("DOMSubtreeModified",function(){
       $('.panel-cover').addClass('panel-cover--collapsed')
       e.preventDefault();
       callPage(pageRef);
+      // go to the top of page.
       document.documentElement.scrollTop=0
     }
   });
