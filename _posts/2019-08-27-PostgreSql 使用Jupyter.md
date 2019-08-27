@@ -1,6 +1,6 @@
 ---
 layout: jupyter
-title: Jupyter Notebook 操作 PostgreSql markdown
+title: Jupyter Notebook 操作 PostgreSql
 website: ''
 tags: tech, 
 ---
