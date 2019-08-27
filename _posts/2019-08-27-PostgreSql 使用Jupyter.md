@@ -2,7 +2,7 @@
 layout: jupyter
 title: Jupyter Notebook 操作 PostgreSql
 website: ''
-tags: tech, 
+tags: tech sql PostgreSql 
 ---
 
 ### 安装与使用

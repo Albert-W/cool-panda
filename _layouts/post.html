@@ -10,7 +10,10 @@
             {% else %} {{ page.title }} {%endif%}
         </h1>
         <div class="post-meta">
-            <time datetime="{{page.date | date: date_to_xmlschema}}" itemprop="datePublished" class="post-meta__date date">{{page.date | date: "%F"}}</time> &#8226; <span class="post-meta__tags tags">{{page.tags | join:' '}}</span>
+            <time datetime="{{page.date | date: date_to_xmlschema}}" itemprop="datePublished" class="post-meta__date date">
+              {{page.date | date: "%F"}}
+            </time> &#8226; 
+            <span class="post-meta__tags tags">poster, {{page.tags | join:', '}}</span>
 
         </div>
 
