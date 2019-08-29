@@ -216,7 +216,8 @@ td:last-child {
 .author,
 .tags {
   font-size: .8em;
-  color: #c7c7c7; }
+  /* color: #c7c7c7;  */
+}
   .date a,
   .time a,
   .author a,
@@ -231,8 +232,8 @@ td:last-child {
 .excerpt {
   margin: 0;
   font-size: .9em;
-  color: #999999; }
-
+  /* color: #999999; */
+}
 .intro {
   font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   font-size: 1.2em;
@@ -273,7 +274,8 @@ td:last-child {
   padding: 2em 0 0 0;
   border-top: 2px solid #DDDDDD;
   font-size: .7em;
-  color: #b3b3b3; }
+  /* color: #b3b3b3;  */
+}
 
 .footer__copyright {
   display: block;
@@ -482,7 +484,8 @@ hr {
 
 .btn-tertiary {
   border-color: #999999;
-  color: #999999; }
+  /* color: #999999;  */
+}
   .btn-tertiary:hover {
     color: #737373;
     border-color: #737373; }
@@ -550,7 +553,8 @@ hr {
 .pagination__page-number {
   margin: 0;
   font-size: .8em;
-  color: #999999; }
+  /* color: #999999;  */
+}
 
 .pagination__newer {
   margin-right: 1em; }
@@ -589,6 +593,7 @@ i {
   font-size: 1.0em;
   line-height: 1.3em; }
   .post-list__post-title a {
+    font-weight: bolder;
     color: #333333; }
     .post-list__post-title a:hover {
       color: #174065; }
@@ -597,11 +602,13 @@ i {
   display: block;
   margin: .7em 0 0 0;
   font-size: .9em;
-  color: #c7c7c7; }
+  /* color: #c7c7c7;  */
+}
 
 .post-list__meta--date {
   margin-right: .5em;
-  color: #c7c7c7; }
+  /* color: #c7c7c7;  */
+}
 
 .post-list__meta--tags {
   margin-left: .5em; }
@@ -838,3 +845,7 @@ input[type="tel"] {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
+
+.label {
+  display: none;
+}    
