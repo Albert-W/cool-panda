@@ -7,7 +7,7 @@ creator: <a href="">Yichang Wu</a>
 
 url: ''
 # baseurl : '/cool-panda'
-baseurl : 'https://coolpanda.ml'
+# baseurl : 'https://coolpanda.ml'
 
 # permalink: /:year/:month/:title/
 permalink: /:year-:month-:day/:title.html
