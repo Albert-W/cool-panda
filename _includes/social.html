@@ -15,8 +15,8 @@
   {% if site.social.zhihu %}
   <!-- Weibo -->
   <li class="navigation__item">
-    <a rel='noreferrer noopener' href="https://www.zhihu.com/people/{{site.social.zhihu}}" title="伍亦勤 的知乎" target="_blank">
-      <span class='iconfont icon-zhihu' ></span>
+    <a aria-label="Go to the personal homepage of zhihu" rel='noreferrer noopener' href="https://www.zhihu.com/people/{{site.social.zhihu}}" title="伍亦勤 的知乎" target="_blank">
+      <span class='iconfont icon-zhihu' >知乎</span>
       <!-- <span class="label">知乎</span> -->
     </a>
   </li>
@@ -25,23 +25,23 @@
   {% if site.social.github %}
   <!-- Github -->
   <li class="navigation__item">
-    <a rel='noreferrer noopener' href="https://github.com/{{site.social.github}}" title="{{site.social.github}} 的 Github" target="_blank">
+    <a aria-label="Go to the personal homepage of github" rel='noreferrer noopener' href="https://github.com/{{site.social.github}}" title="{{site.social.github}} 的 Github" target="_blank">
       <!-- <i class='social fab fa-github'></i> -->
-      <span class='iconfont icon-github' ></span>
+      <span class='iconfont icon-github' >github</span>
       <!-- <span class="label">Github</span> -->
     </a>
   </li>
   {% endif %}
 
-  {% if site.social.twitter %}
+  <!-- {% if site.social.twitter %} -->
   <!-- Twitter -->
-  <li class="navigation__item">
+  <!-- <li class="navigation__item">
     <a href="http://twitter.com/{{site.social.twitter}}" title="@{{site.social.twitter}}" target="_blank">
       <i class='social fa fa-twitter'></i>
       <span class="label">Twitter</span>
     </a>
-  </li>
-  {% endif %}
+  </li> -->
+  <!-- {% endif %} -->
 
   <!-- {% if site.social.gplus %} -->
   <!-- Google Plus -->
@@ -61,14 +61,14 @@
   </a>
 </li> -->
 
-  {% if site.social.mail %}
+  <!-- {% if site.social.mail %} -->
   <!-- Email -->
-  <li class="navigation__item">
+  <!-- <li class="navigation__item">
     <a href="mailto:{{site.social.mail}}" title="Contact me">
       <i class='social fa fa-envelope'></i>
       <span class="label">Email</span>
     </a>
-  </li>
-  {% endif %}
+  </li> -->
+  <!-- {% endif %} -->
 
 </ul>
