@@ -4,7 +4,6 @@ let CACHE_NAME = 'static-cache-v1';
 
 let FILES_TO_CACHE = [
     '/',
-    '/offline.html',
     '/index.html',
     '/css/main.css',
     '/webs/index.html',
@@ -14,6 +13,7 @@ let FILES_TO_CACHE = [
     '/assets/images/background-cover.jpg',
     '/assets/images/avatar.jpg',
     '/assets/images/favicon.png',
+    '/assets/images/favicon.png?',
     '/assets/theWorldIsYours.mp3'
 ];
 async function precache(){
