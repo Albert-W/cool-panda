@@ -60,3 +60,7 @@ ga:
     # host: your_host
 
 exclude: ["xxx", "changelog.md", "nohup.out"]    
+
+# compress the css file.
+sass:
+    style: compressed
