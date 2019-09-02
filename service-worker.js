@@ -7,14 +7,14 @@ let FILES_TO_CACHE = [
     '/offline.html',
     '/index.html',
     '/css/main.css',
-    '/assets/images/favicon.png',
     '/webs/index.html',
     '/js/main_nojq.js',
     '/js/spa_nojq.js',
     '/js/music_nojq.js',
     '/assets/images/background-cover.jpg',
-    '/assets/images/avatar.jpg'
-    // '/assets/theWorldIsYours.mp3'
+    '/assets/images/avatar.jpg',
+    '/assets/images/favicon.png',
+    '/assets/theWorldIsYours.mp3'
 ];
 async function precache(){
     const cache = await caches.open(CACHE_NAME);
