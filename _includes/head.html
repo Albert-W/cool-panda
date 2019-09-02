@@ -15,7 +15,13 @@
   <link href="{{site.baseurl}}/assets/images/favicon.png?" rel="apple-touch-icon" type="image/png">
   <link href="{{site.baseurl}}/assets/images/favicon.png?" rel="shortcut icon" type="image/png">
   <link media="all" rel="stylesheet" href="{{site.baseurl}}/css/main.css">
-
+  <link rel="manifest" href="{{site.baseurl}}/manifest.json">
+  <!-- for safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="coolpanda PWA">
+  <link rel="apple-touch-icon" href="{{site.baseurl}}/assets/images/favicon.png">
+  
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <!-- <meta name="description"
     content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"> -->
