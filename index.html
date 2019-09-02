@@ -6,34 +6,49 @@ discription: This is the entry point.
 <!DOCTYPE html>
 <html lang="en">
 
-  {% include head.html %}
-  <body>
-    
-    {% include side-panel.html %}
-    <div class="content-wrapper">
-        <div id="page1">
-        </div>
-        {% include footer.html %}
-    </div>
+{% include head.html %}
 
-  </body>
+<body>
+
+  {% include side-panel.html %}
+  <div class="content-wrapper">
+    <div id="page1">
+    </div>
+    {% include footer.html %}
+  </div>
+
+</body>
+
 </html>
 
 
 <script>
-    // load paginate file. 
-    // powerful AJAX method.
-    fetch("webs/index").then(data => data.text()).then(data => {
-      document.querySelector('#page1').innerHTML = data
+
+  // load paginate file. 
+  // powerful AJAX method.
+  fetch("webs/index").then(data => data.text()).then(data => {
+    document.querySelector('#page1').innerHTML = data
+  })
+  // $('#page1').load("webs/index");
+
+  //PWA Service Worker
+  if ('serviceWorker' in navigator) {
+
+    navigator.serviceWorker.getRegistrations().then(function (regs) {
+      for (var reg of regs) {
+        reg.unregister();
+      }
     })
-    // $('#page1').load("webs/index");
-    //PWA Service Worker
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js')
-            .then((reg) => {
-              console.log('Service worker registered.', reg);
-            });
+
+    navigator.serviceWorker.register('/service-worker.js',
+      { scope: '/' })
+      .then((reg) => {
+        console.log('Service worker registered. scope:', reg.scope);
+      })
+      .catch(function (error) {
+        console.log('Service worker cannot register.', reg);
       });
-    }
+
+  }
+
 </script>

@@ -1,62 +1,62 @@
-'use strict';
+// 'use strict';
 // CODELAB: Update cache names any time any of the cached files change.
-const CACHE_NAME = 'static-cache-v1';
+let CACHE_NAME = 'static-cache-v1';
 
-const FILES_TO_CACHE = [
+let FILES_TO_CACHE = [
     '/',
     '/offline.html',
     '/index.html',
     '/css/main.css',
+    '/assets/images/favicon.png',
+    '/webs/index.html',
     '/js/main_nojq.js',
-    'js/spa_nojq.js',
-    'js/spa_nojq.js',
+    '/js/spa_nojq.js',
+    '/js/music_nojq.js',
     '/assets/images/background-cover.jpg',
-    '/assets/images/avatar.jpg',
-    '/assets/theWorldIsYours.mp3'
+    '/assets/images/avatar.jpg'
+    // '/assets/theWorldIsYours.mp3'
 ];
+async function precache(){
+    const cache = await caches.open(CACHE_NAME);
+    console.log('[ServiceWorker] Pre-caching offline page');
+    return cache.addAll(FILES_TO_CACHE);
+}
 
-self.addEventListener('install', (evt) => {
+async function clearCache(){
+    const keyList = await caches.keys();
+    return Promise.all(keyList.map((key) => {
+        if (key !== CACHE_NAME) {
+            console.log('[ServiceWorker] Removing old cache', key);
+            return caches.delete(key);
+        }
+    }));
+}
+
+this.addEventListener('install', (event) => {
     console.log('[ServiceWorker] Install');
     // CODELAB: Precache static resources here.
-    evt.waitUntil(
-        caches.open(CACHE_NAME).then((cache) => {
-            console.log('[ServiceWorker] Pre-caching offline page');
-            return cache.addAll(FILES_TO_CACHE);
-        })
+    event.waitUntil(
+        precache()
     );
-    self.skipWaiting();
+    this.skipWaiting();
 });
 
-self.addEventListener('activate', (evt) => {
+this.addEventListener('activated', (event) => {
     console.log('[ServiceWorker] Activate');
     // CODELAB: Remove previous cached data from disk.
-    evt.waitUntil(
-        caches.keys().then((keyList) => {
-            return Promise.all(keyList.map((key) => {
-                if (key !== CACHE_NAME ) {
-                    console.log('[ServiceWorker] Removing old cache', key);
-                    return caches.delete(key);
-                }
-            }));
-        })
+    event.waitUntil(
+        clearCache()
+
     );
-    self.clients.claim();
+
 });
 
-self.addEventListener('fetch', (evt) => {
-    console.log('[ServiceWorker] Fetch', evt.request.url);
+self.addEventListener('fetch', (event) => {
+    console.log('[ServiceWorker] Fetch', event.request.url);
     // CODELAB: Add fetch event handler here.
-    if (evt.request.mode !== 'navigate') {
-        // Not a page navigation, bail.
-        return;
-    }
-    evt.respondWith(
-        fetch(evt.request)
-            .catch(() => {
-                return caches.open(CACHE_NAME)
-                    .then((cache) => {
-                        return cache.match('offline.html');
-                    });
-            })
-    );
+    event.respondWith(
+        fetch(event.request).catch(function(){
+            return caches.match(event.request);
+        }))
+
 });
