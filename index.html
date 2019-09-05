@@ -23,7 +23,7 @@ discription: This is the entry point.
 
 
 <script>
-
+  // let ui = require('./ui');
   // load paginate file. 
   // powerful AJAX method.
   fetch("webs/index").then(data => data.text()).then(data => {
@@ -48,7 +48,19 @@ discription: This is the entry point.
       .catch(function (error) {
         console.log('Service worker cannot register.', reg);
       });
+      // remind the user
+      navigator.serviceWorker.oncontrollerchange = function(event){
+        // ul.showToast('The page is refreshed','info');
+      }
+
+      if(!navigator.onLine){
+        ui.showToast("internet disconnect",'warning');
+        window.addEventListener('online', function(event){
+          // ui.showToast('internet is connected, refresh.','info');
+        })
+      }
 
   }
+
 
 </script>
