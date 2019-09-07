@@ -2,7 +2,7 @@
     "name": "coolpanda PWA",
     "short_name": "coolpanda",
     "display": "standalone",
-    "start_url": "/index",
+    "start_url": "/",
     "background_color": "#3E4EB8",
     "theme_color": "#2F3BA2",
     "icons": [

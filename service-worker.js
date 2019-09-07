@@ -76,13 +76,19 @@ self.addEventListener('fetch', (event) => {
         return; 
     }
 
-    
-
     event.respondWith(
         //优先从网上获取，失败后回退到catch()
-        fetch(event.request).catch(function(){
-            //从本地返回
-            return caches.match(event.request);
-        }))
+        // fetchAndCache(event.request).catch(function(){
+        //     //从本地返回
+        //     return caches.match(event.request);
+        // })
+        // 优先从本地缓存，失败后从网络获取
+        caches.match(event.request).then(function(response){
+            return response || fetchAndCache(event.request);
+        })
+        
+    )
+        
+        
 
 });

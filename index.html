@@ -31,6 +31,7 @@ discription: This is the entry point.
   })
   // $('#page1').load("webs/index");
 
+
   //PWA Service Worker
   if ('serviceWorker' in navigator) {
 
@@ -49,16 +50,17 @@ discription: This is the entry point.
         console.log('Service worker cannot register.', reg);
       });
       // remind the user
-      navigator.serviceWorker.oncontrollerchange = function(event){
-        // ul.showToast('The page is refreshed','info');
-      }
+      // navigator.serviceWorker.oncontrollerchange = function(event){
+      //   // ul.showToast('The page is refreshed','info');
+      // }
 
-      if(!navigator.onLine){
-        ui.showToast("internet disconnect",'warning');
-        window.addEventListener('online', function(event){
-          // ui.showToast('internet is connected, refresh.','info');
-        })
-      }
+      // if(!navigator.onLine){
+      //   // ui.showToast("internet disconnect, content may be expired.",'warning');
+      //   window.addEventListener('online', function(event){
+      //     // ui.showToast('internet is reconnected, refresh to fetch new content.','info');
+
+      //   })
+      // }
 
   }
 
