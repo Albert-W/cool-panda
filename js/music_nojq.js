@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded',function () {
+  console.log('music_nojq.js')
     // Music Control System---------------------------------------
   var aud = document.getElementById("aud");
   var logo = document.querySelector('.panel-cover__logo');
