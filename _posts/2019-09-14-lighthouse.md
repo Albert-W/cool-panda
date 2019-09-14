@@ -11,7 +11,7 @@ Lighthouse 可以粗略理解网站跑分工具，同时会返回极有建设性
 
 评测内容包括五大块：性能(Performance)，易用性(Accessibility)，最佳实践(Best Practices)，搜索引擎优化(SEO)，渐进式网络应用(PWA)。涵盖了网站开发中的主要指标，有助于开发人员发现优化盲区。 
 
-本个博客网络，评测成绩如下：
+[本人博客](https://coolpanda.ml/)，评测成绩如下：
 ![Lighthouse](/assets/images/lighthouse.png)
 
 部分分析报告如下：
@@ -32,3 +32,5 @@ Google 主页的成绩如下：
 4. 清除网站缓存（可选）
 5. 点击Chrome 工具栏上的 Lighthouse 图标。
 6. Lighthouse扫描几分钟之后，输出结果报告。
+
+本人博客Github地址：https://github.com/Albert-W/cool-panda
