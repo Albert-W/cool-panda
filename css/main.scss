@@ -601,7 +601,9 @@ i {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  text-align: left; }
+  text-align: left; 
+  overflow: hidden;
+}
   .post-list li {
     margin: 0 0 2.2em 0; }
     .post-list li:last-child hr {
@@ -613,6 +615,7 @@ i {
   font-size: 1.0em;
   line-height: 1.3em; }
   .post-list__post-title a {
+    font-size:1.2em;
     font-weight: bolder;
     color: #333333; }
     .post-list__post-title a:hover {
