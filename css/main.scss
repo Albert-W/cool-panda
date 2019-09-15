@@ -566,9 +566,6 @@ hr {
     display: block;
     font-size: 1.7em; }
 
-.pagination {
-  display: block;
-  margin: 0 0 4em 0; }
 
 .pagination__page-number {
   margin: 0;
@@ -615,7 +612,7 @@ i {
   font-size: 1.0em;
   line-height: 1.3em; }
   .post-list__post-title a {
-    font-size:1.2em;
+    // font-size:1.2em;
     font-weight: bolder;
     color: #333333; }
     .post-list__post-title a:hover {
@@ -768,6 +765,11 @@ input[type="tel"] {
     margin-left: 0; } }
 
 @media all and (max-width: 960px) {
+  .post-list__divider,
+  .read-more .excerpt, 
+  .read-more .post-list__meta{
+    display:none;
+  }
   .btn-mobile-menu {
     display: block; }
 
@@ -823,13 +825,18 @@ input[type="tel"] {
   .content-wrapper {
     width: 100%;
     max-width: none;
-    margin: 0 auto; }
-  .post-container,
-  .list-container,
-  .page-card,
-  .footer {
-    margin: 15px 15px;
+    // margin: 0px 0px 400px 0px; 
   }
+  .post-container,
+  .page-card,
+  .footer,
+  .list-container{
+    margin: 15px 15px 300px 15px;
+  }
+  #page1 .list-container{
+    margin:15px 15px !important;
+  }
+
   .post-list__post-title{
     font-size:1.0em;
   }

@@ -1,4 +1,5 @@
-document.addEventListener('DOMContentLoaded',function () {
+window.addEventListener('load',function () {
+// document.addEventListener('DOMContentLoaded',function () {
     console.log("hello Spa_nojq.js");
     addevent()    
 });

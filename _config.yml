@@ -23,6 +23,7 @@ blog_button:
     title: Blog
     description: Visit blog
     url: '/webs/index'
+    # url: '/#c'
 
 # Navigation buttons in the front page.
 nav:

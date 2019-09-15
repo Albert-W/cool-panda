@@ -1,6 +1,6 @@
 // 'use strict';
 // CODELAB: Update cache names any time any of the cached files change.
-let CACHE_NAME = 'static-cache-v1.03';
+let CACHE_NAME = 'static-cache-v1.04';
 
 let FILES_TO_CACHE = [
     '/',
