@@ -5,10 +5,12 @@ window.addEventListener('load',function () {
 });
 // Single Page Website----------------------------------------
 function addevent(){
+    document.querySelector('.content-wrapper').scrollTop = 0;
         var alist = document.querySelectorAll('a');
         for( var i=0;i<alist.length;i++){
             alist[i].addEventListener('click', function (e) {
                 e.stopPropagation();
+                // 得到地址
                 var pageRef = this.getAttribute('href'); //return string
                 console.log(pageRef);
                 // var host = document.domain
@@ -21,7 +23,7 @@ function addevent(){
                     e.preventDefault();
                     callPage(pageRef);
                     // go to the top of page.
-                    document.documentElement.scrollTop=0
+                    // document.documentElement.scrollTop=0
                 }
             });
     }
