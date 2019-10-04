@@ -9,6 +9,30 @@
 为充分利用github page 和 jekyll 的便利，建议先学习jekyll的使用。
 推荐一个教学视频——[Jekyll - 静态网站生成器教程](https://www.bilibili.com/video/av25864819/)
 
+### 安装
+1, Install ruby-build tool:
+```bash
+$ sudo yum install git-core zlib zlib-devel gcc-c++ patch readline readline-devel libyaml-devel libffi-devel openssl-devel make bzip2 autoconf automake libtool bison curl sqlite-devel
+```
+2, Install rbenv and ruby-buld:
+```bash
+curl -sL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash -
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+source ~/.bashrc
+```
+3, Install ruby:
+```bash
+rbenv install -l
+rbenv install 2.6.5
+rbenv global 2.6.5
+```
+
+4, Install jekyll, bundler:
+```bash
+gem install jekyll bundler
+```
+
 ### 使用
 
 ```bash
