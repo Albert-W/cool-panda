@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: table
 title: jQuery 与 JS 命令参照表
 website: 'https://github.com/Albert-W/jsDemo/'
 tags: tech javascript

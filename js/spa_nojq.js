@@ -31,11 +31,33 @@ function addevent(){
     // console.log("add spa event completely.")
 }
 
+function decorate(){
+    // 异步加载时，以innerHTML 载入，不执行
+    let trs = document.querySelectorAll('tr');
+    for (let tr of trs){
+        let tds = tr.querySelectorAll('td');
+        // 首行为th, tds为[], 需要判断是否为空数组
+        if(tds.length != 0 && tds[0].innerHTML == "&nbsp;"){
+            continue;
+        }
+        let i = 1;
+        // 如果除第一列以外，其他列为空，则标记。
+        for(; i<tds.length;i++){
+            if(tds[i].innerHTML != "&nbsp;"){
+                break;
+            }
+        }
+        if(i == tds.length){
+            tr.classList.add('section');
+        }
+    }    
+}
 
   
 function callPage(url) {
     fetch(url).then(data => data.text()).then(data =>{
     document.querySelector('.content-wrapper').innerHTML = data;
     })
-    .then(addevent);
+    .then(addevent)
+    .then(decorate);
 }

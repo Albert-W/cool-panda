@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: table
 title: ubuntu 与 centos 命令参照表
 website: 
 tags: tech linux
