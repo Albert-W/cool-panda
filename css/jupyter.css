@@ -11,7 +11,7 @@ article p {
   background: white;
   border:none;
 }
-.language-python pre {
+.language-python pre ,.language-javascript pre {
   background:#f7f7f7;
   border:1px solid #cfcfcf;
 }
