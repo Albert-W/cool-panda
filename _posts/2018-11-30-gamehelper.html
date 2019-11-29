@@ -64,6 +64,7 @@ title : 小地图提示器
         time = input.value;
     })
     start.addEventListener("click",function(){
+        console.log("start click");
         clearInterval(t)
         t = setInterval(function () {
             if (i % parseInt(time) === parseInt(time) - 1) {

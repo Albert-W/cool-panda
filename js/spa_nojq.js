@@ -4,6 +4,7 @@ window.addEventListener('load',function () {
     addevent()    
 });
 // Single Page Website----------------------------------------
+// 异步网页加载完成之后，添加点击事件
 function addevent(){
     document.querySelector('.content-wrapper').scrollTop = 0;
         var alist = document.querySelectorAll('a');
@@ -31,33 +32,37 @@ function addevent(){
     // console.log("add spa event completely.")
 }
 
-function decorate(){
-    // 异步加载时，以innerHTML 载入，不执行
-    let trs = document.querySelectorAll('tr');
-    for (let tr of trs){
-        let tds = tr.querySelectorAll('td');
-        // 首行为th, tds为[], 需要判断是否为空数组
-        if(tds.length != 0 && tds[0].innerHTML == "&nbsp;"){
-            continue;
-        }
-        let i = 1;
-        // 如果除第一列以外，其他列为空，则标记。
-        for(; i<tds.length;i++){
-            if(tds[i].innerHTML != "&nbsp;"){
-                break;
-            }
-        }
-        if(i == tds.length){
-            tr.classList.add('section');
-        }
-    }    
+// innterHTML 中的 <script> 无法执行，需要重新加载
+function runjs(){
+    // script = document.querySelector('.content-wrapper').getElementsByTagName('script')[0];
+    scripts = document.querySelector('.content-wrapper').querySelectorAll('script');
+    console.log(scripts);
+    // 这种方式绑定事件，无法成功。
+    // if(script){
+    //     document.body.appendChild(script)
+    // }
+
+    for (var script of scripts){
+        console.log(script);
+        var sobj = document.createElement('script');
+        sobj.type = 'text/javascript';
+        sobj.innerHTML = script.innerHTML;
+        // 在头部可以完成绑定事件。 
+        document.head.appendChild(sobj);
+        // 在尾部也可以完成绑定事件
+        // document.body.appendChild(sobj);
+    }
 }
 
-  
+// 获取ajax数据  
 function callPage(url) {
-    fetch(url).then(data => data.text()).then(data =>{
+    fetch(url)
+    .then(data => data.text())
+    .then(data =>{
     document.querySelector('.content-wrapper').innerHTML = data;
     })
+    .then(runjs)
     .then(addevent)
-    .then(decorate);
+    // .then(decorate)
+    ;
 }

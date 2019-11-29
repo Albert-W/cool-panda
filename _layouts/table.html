@@ -25,6 +25,7 @@
     {% include read-more.html %}
     <script>
         // 异步加载时，以innerHTML 载入，不执行
+        // 添加了runjs() 方法之后应该要执行
         let trs = document.querySelectorAll('tr');
         for (let tr of trs){
             let tds = tr.querySelectorAll('td');
