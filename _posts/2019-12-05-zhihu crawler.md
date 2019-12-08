@@ -14,11 +14,11 @@ tags: python, crawler
 ## 效果展示
 前端展示
 
-![image](zhihu_crawler.png)
+![image](/assets/images/zhihu_crawler.png)
 
 数据库展示
 
-![image](backend.png)
+![image](/assets/images/backend.png)
 
 ## 前置条件
 为方便数据库与对象的映射， 引入了sqlalchemy; 
