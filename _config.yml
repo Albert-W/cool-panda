@@ -36,7 +36,7 @@ nav:
 
 # Pagination
 # gems: [jekyll-paginate]
-plugins: [jekyll-paginate]
+plugins: [jekyll-paginate, jekyll-gist]
 paginate: 5
 paginate_path: "webs/page/:num/"
 # paginate_path: "page/:num/"
