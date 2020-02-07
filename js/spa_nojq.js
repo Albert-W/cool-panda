@@ -34,9 +34,11 @@ function addevent(){
 
 // innterHTML 中的 <script> 无法执行，需要重新加载
 function runjs(){
+    
     // script = document.querySelector('.content-wrapper').getElementsByTagName('script')[0];
-    scripts = document.querySelector('.content-wrapper').querySelectorAll('script');
-    console.log(scripts);
+    content_wrapper = document.querySelector('.content-wrapper')
+    scripts = content_wrapper.querySelectorAll('script');
+    // console.log(scripts);
     // 这种方式绑定事件，无法成功。
     // if(script){
     //     document.body.appendChild(script)
@@ -46,12 +48,25 @@ function runjs(){
         console.log(script);
         var sobj = document.createElement('script');
         sobj.type = 'text/javascript';
-        sobj.innerHTML = script.innerHTML;
+        
+        if (script.src){
+            sobj.src = script.src
+        } else {
+            sobj.innerHTML = script.innerHTML;
+        }
+
+        // eval(sobj)
         // 在头部可以完成绑定事件。 
         document.head.appendChild(sobj);
-        // 在尾部也可以完成绑定事件
+        // 在尾部也可以完成绑定事件, 同时可以载入js带来的html文档内容
         // document.body.appendChild(sobj);
+        
+        // document.querySelector('.post').appendChild(sobj);
+        // var s = document.getElementsByTagName("script")[0];
+        // s.parentNode.insertBefore(sobj, s);
+        
     }
+    
 }
 
 // 获取ajax数据  
@@ -63,6 +78,5 @@ function callPage(url) {
     })
     .then(runjs)
     .then(addevent)
-    // .then(decorate)
     ;
 }
