@@ -1,22 +1,7 @@
 --- 
 layout: post
-title: Test for gist 
+title: 将gist嵌入文章中的四种方法 
 tags: markdown, github 
 ---
 
-<object id="ob" width="100%"  data="https://gist.github.com/Albert-W/5aff60a92e6994de808f08ac53ad47db.pibb"  ></object>
-
-<embed id="em" width="100%"  src="https://gist.github.com/Albert-W/5aff60a92e6994de808f08ac53ad47db.pibb" >
-
-<div id = "fet">
-
-</div>
-
-<script>
-var fet = document.querySelector("#fet")
-fetch("https://gist.github.com/Albert-W/5aff60a92e6994de808f08ac53ad47db.pibb")
-.then(data => data.text())
-    .then(data =>{
-    fet.innerHTML = data;
-    })
-</script>
+<embed id="em" width="100%" height="900" src="https://gist.github.com/Albert-W/e100e95d4089fb2976adf26a6b50d75f.pibb" >
