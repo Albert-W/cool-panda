@@ -18,8 +18,21 @@ tags: html
 
 function encrypt(){
     const article=document.getElementById("origin").value;
-    const uncensored=Array.from(article).join('\u200b');
-    document.getElementById("result").innerHTML=uncensored;
+    // unicode编码
+    var res =Array.from(article).join('\u200b');
+    // 国 to 國
+    res = res.replace(new RegExp('\u56fd', 'g'),'\u570b')
+    // 产
+    res = res.replace(new RegExp('\u4ea7', 'g'),'\u7522')
+    // 义
+    res = res.replace(new RegExp('\u4e49', 'g'),'\u7fa9')
+    // 会
+    res = res.replace(new RegExp('\u4f1a', 'g'),'\u6703')
+    // 资
+    res = res.replace(new RegExp('\u8d44', 'g'),'\u8cc7')
+
+
+    document.getElementById("result").innerHTML=res;
 }
 
 var copy = function(){
