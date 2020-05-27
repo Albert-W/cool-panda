@@ -30,7 +30,10 @@ function encrypt(){
     res = res.replace(new RegExp('\u4f1a', 'g'),'\u6703')
     // 资
     res = res.replace(new RegExp('\u8d44', 'g'),'\u8cc7')
-
+    // 阶
+    res = res.replace(new RegExp('\u9636', 'g'),'\u968e')
+    // 级
+    res = res.replace(new RegExp('\u7ea7', 'g'),'\u7d1a')
 
     document.getElementById("result").innerHTML=res;
 }
