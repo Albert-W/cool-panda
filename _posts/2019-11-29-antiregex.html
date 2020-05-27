@@ -34,6 +34,8 @@ function encrypt(){
     res = res.replace(new RegExp('\u9636', 'g'),'\u968e')
     // 级
     res = res.replace(new RegExp('\u7ea7', 'g'),'\u7d1a')
+    // 党
+    res = res.replace(new RegExp('\u515a', 'g'),'\u9ee8')
 
     document.getElementById("result").innerHTML=res;
 }
